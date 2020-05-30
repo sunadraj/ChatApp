@@ -14,11 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
+        android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="16dp"
 
-        >
+        android:padding="16dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -28,14 +28,6 @@
             android:textColor="#000000"
             android:textSize="20dp" />
 
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/Username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Username"
-            app:met_floatingLabel="normal" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/Email"
@@ -55,12 +47,12 @@
 
 
         <Button
-            android:id="@+id/Register"
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:hint="Register"
+            android:hint="Login"
             app:met_floatingLabel="normal" />
 
     </LinearLayout>
