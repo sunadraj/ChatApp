@@ -16,9 +16,7 @@
         android:layout_below="@+id/toolbar"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="16dp"
-
-        >
+        android:padding="16dp">
 
         <TextView
             android:layout_width="match_parent"
