@@ -8,11 +8,11 @@
     android:orientation="vertical"
     tools:context=".StartActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chat App"
-        android:textSize="25dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/sjs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,19 +20,19 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:background="@color/cardview_dark_background"
+        android:background="#08782e"
         android:text="Login"
         android:textSize="20dp" />
 
     <Button
         android:id="@+id/Register"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:background="#d9221c"
         android:text="Register"
         android:textSize="20dp" />
 

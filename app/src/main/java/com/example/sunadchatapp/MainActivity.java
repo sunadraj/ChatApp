@@ -1,10 +1,14 @@
 package com.example.sunadchatapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.example.sunadchatapp.Model.User;
@@ -30,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
+
         profile_image = findViewById(R.id.profile_image);
         username = findViewById(R.id.Username);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -39,23 +48,48 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                User user = dataSnapshot.getValue(User.class);
-                username.setText(user.getUsername());
-                if (user.getImageurl().equals("default")) {
-                    profile_image.setImageResource(R.mipmap.ic_launcher);
-                } else {
-                    Glide.with(MainActivity.this).load(user.getImageurl()).into(profile_image);
+                try {
+                    User user = dataSnapshot.getValue(User.class);
+                    username.setText(user.getUsername());
+                    if (user.getImageurl().equals("default")) {
+                        profile_image.setImageResource(R.mipmap.ic_launcher);
+                    } else {
+                        Glide.with(MainActivity.this).load(user.getImageurl()).into(profile_image);
+                    }
+                } catch (Exception e) {
+
                 }
 
 
             }
 
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
+
         });
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, StartActivity.class));
+                finish();
+                return true;
+        }
+
+        return false;
+    }
 }
