@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     User user = dataSnapshot.getValue(User.class);
                     username.setText(user.getUsername());
-                    if (user.getImageurl().equals("default")) {
+                    if (user.getImageURL().equals("default")) {
                         profile_image.setImageResource(R.mipmap.ic_launcher);
                     } else {
-                        Glide.with(MainActivity.this).load(user.getImageurl()).into(profile_image);
+                        Glide.with(MainActivity.this).load(user.getImageURL()).into(profile_image);
                     }
                 } catch (Exception e) {
 
