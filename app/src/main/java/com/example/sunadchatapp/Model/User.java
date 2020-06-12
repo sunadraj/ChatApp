@@ -2,18 +2,29 @@ package com.example.sunadchatapp.Model;
 
 public class User {
 
-    public String id;
-    public String username;
-    public String imageURL;
+    private String id;
+    private String username;
+    private String imageURL;
+    private String status;
+
+
+    public User(String id, String username, String imageurl, String status) {
+        this.id = id;
+        this.username = username;
+        this.imageURL = imageurl;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 
     public User() {
 
     }
 
-    public User(String id, String username, String imageurl) {
-        this.id = id;
-        this.username = username;
-        this.imageURL = imageurl;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getId() {
