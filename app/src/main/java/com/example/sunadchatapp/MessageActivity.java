@@ -234,6 +234,7 @@ public class MessageActivity extends AppCompatActivity {
         super.onResume();
         status("online");
 
+
     }
 
     @Override
