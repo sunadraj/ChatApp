@@ -9,7 +9,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/sj_icon"
-        android:label="Oye"
+        android:label="Chat!"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
