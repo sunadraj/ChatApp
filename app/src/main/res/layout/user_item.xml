@@ -49,4 +49,18 @@
         app:civ_border_color="#bfbfbf"
         app:civ_border_width="10dp" />
 
+    <TextView
+        android:id="@+id/last_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/profile_image"
+        android:maxLines="1"
+        android:paddingTop="5dp"
+        android:textColor="@color/colorPrimaryDark"
+
+        />
+
 </RelativeLayout>
