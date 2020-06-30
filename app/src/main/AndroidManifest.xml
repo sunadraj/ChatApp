@@ -38,7 +38,7 @@
             android:parentActivityName=".StartActivity" />
 
         <service
-            android:name=".Notifications.MyFirebaseMessaging"
+            android:name=".Notifications.MyFirebaseIdService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
