@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -85,9 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tablayout);
         ViewPager viewPager = findViewById(R.id.view_pager);
-
         ViewPageAdapter viewPageAdapter = new ViewPageAdapter(getSupportFragmentManager());
-
         viewPageAdapter.addFragment(new ChatsFragment(), "Chats");
         viewPageAdapter.addFragment(new UsersFragment(), "Users");
         viewPageAdapter.addFragment(new ProfileFragment(), "Profile");
