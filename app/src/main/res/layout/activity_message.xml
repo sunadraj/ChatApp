@@ -6,6 +6,7 @@
     android:background="#e6e6e6"
     tools:context=".MessageActivity">
 
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/bar_layout"
         android:layout_width="match_parent"
