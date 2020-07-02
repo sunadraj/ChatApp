@@ -88,8 +88,6 @@ public class MainActivity extends AppCompatActivity {
         viewPageAdapter.addFragment(new ChatsFragment(), "Chats");
         viewPageAdapter.addFragment(new UsersFragment(), "Users");
         viewPageAdapter.addFragment(new ProfileFragment(), "Profile");
-
-
         viewPager.setAdapter(viewPageAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
