@@ -64,6 +64,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
                 Glide.with(mContext).load(user.getImageURL()).into(holder.profile_image);
             }
+
         } catch (Exception e) {
 
         }
