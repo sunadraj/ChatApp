@@ -69,6 +69,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
         }
 
+
         if (ischat) {
             lastMessage(user.getId(), holder.last_msg);
         } else {
