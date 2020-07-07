@@ -14,7 +14,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ResetPasswordActivity"
-            android:parentActivityName=".LoginActivity"></activity>
+            android:parentActivityName=".LoginActivity">
+
+        </activity>
         <activity android:name=".MessageActivity" />
         <activity android:name=".MainActivity" />
         <activity
