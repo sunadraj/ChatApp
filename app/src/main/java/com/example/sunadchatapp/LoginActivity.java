@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView forgot_password;
     FirebaseAuth auth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
