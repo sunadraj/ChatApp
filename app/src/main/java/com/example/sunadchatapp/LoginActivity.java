@@ -62,6 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(text_email) || TextUtils.isEmpty(text_email)) {
                     Toast.makeText(LoginActivity.this, "you cant register this email or password", Toast.LENGTH_SHORT).show();
 
+
                 } else {
                     auth.signInWithEmailAndPassword(text_email, text_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
